@@ -4,18 +4,15 @@ var answer = [];
 var userAnswer = "";
 function sub(event) {
   event.preventDefault();
-  fetch("tickets.php");
   dropzone.childNodes.forEach((element) => {
     userAnswer += element.textContent;
   });
   console.log(answer, userAnswer);
   if (answer == userAnswer) {
     fetch(
-      `tickets.php?fristName=${GV("fristName")}&lastName=${GV(
-        "lastName"
-      )}&phone=${GV("phone")}&password=${GV("password")}`
+      `tickets.php?fristName=${GV("fristName")}&lastName=${GV("lastName")}&phone=${GV("phone")}&password=${GV("password")}`
     ).then(() => {
-      location.href = "home.html";
+      // location.href = "home.html";
     });
   } else {
     alert("驗證碼錯誤");

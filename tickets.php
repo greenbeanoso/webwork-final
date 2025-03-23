@@ -4,5 +4,5 @@
     $lastName = $_GET["lastName"];
     $phone = $_GET["phone"];
     $password = $_GET["password"];
-    $db->query("INSERT INTO user (fristName, lastName, phone, password) VALUES ('$fristName', '$lastName', '$phone', '$password')");
+    $db->query("INSERT INTO `tickes`(`fristName`, `last_name`, `phone`, `password`) VALUES ('$fristName', '$lastName', '$phone', '$password')");
 ?>
