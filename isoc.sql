@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2025 年 03 月 23 日 11:41
+-- 產生時間： 2025 年 03 月 24 日 01:27
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.0.30
 
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tickes` (
   `id` int(11) NOT NULL,
-  `fristName` int(11) NOT NULL,
-  `lastName` int(11) NOT NULL,
-  `phone` int(11) NOT NULL,
-  `password` int(11) NOT NULL
+  `fristName` text NOT NULL,
+  `last_name` text NOT NULL,
+  `phone` text NOT NULL,
+  `password` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -53,7 +53,7 @@ ALTER TABLE `tickes`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `tickes`
 --
 ALTER TABLE `tickes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
